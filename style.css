@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+    nav{
+    background-color: rgb(60, 57, 57);
+    color: white;
+    padding: 10px;
+}
+body{
+    background-color: rgb(84, 146, 201);
+    font-family: 'Kalam', cursive;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+}
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.container{
+    margin-top: 40px;
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+}
+.box{
+    border: 2px solid black;
+    font-size: 6vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(154, 190, 220);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.boxtext{
+    color: rgb(147, 83, 20);
+    -webkit-text-stroke: 1.5px black;
+}
+.imgbox img{
+    width: 0px;
+    height: 50vh;
+    position: absolute;
+    top: 28%;
+    left: 33%;
+    transition: width 0.5s ease-in-out;
+}
+.bt0{
+    border-top: 0;
+}
+.bb0{
+    border-bottom: 0;
+}
+.br0{
+    border-right: 0;
+}
+.bl0{
+    border-left: 0;
+}
+.info{
+    font-size: 3vw;
+    color: rgb(147, 83, 20);
+    -webkit-text-stroke: 1px black;
+}
+.reset{
+    display: block;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 1vw;
+    width: 5vw;
+    background-color: rgb(147, 83, 20);
+    color: black;
+    font-weight: 600;
+    font-family: 'Kalam', cursive;
+    font-size: 1.5vw;
+    margin-top: 10px;
+}
+.reset:hover{
+    scale: 1.05;
+    background-color: rgb(180, 115, 51);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px){
+    nav ul li{
+        font-size: 2rem;
+    }
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .box{
+        font-size: 3.6rem;
+    }
+    .info{
+        font-size: 2rem;
+    }
+    .container{
+        display: grid;
+        grid-template-rows: repeat(3, 23vw);
+        grid-template-columns: repeat(3, 23vw);
+    }
+    .imgbox img{
+        width: 0px;
+        height: 35vh;
+        position: absolute;
+        top: 20%;
+        left: 0;
+        transition: width 0.5s ease-in-out;
+    }
+    .reset{
+        margin-top: 34px;
+        font-size: 1.5rem;
+        width: 5rem;
+        border-radius: 1rem;
+    }
+}
